@@ -1,0 +1,1655 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #08070a;
+
+    --background-secondary: #100b10;
+
+    --card: rgba(22, 15, 23, 0.88);
+
+    --card-hover: rgba(31, 19, 32, 0.95);
+
+    --primary: #ff4fa3;
+
+    --primary-light: #ff82bd;
+
+    --primary-dark: #e9368c;
+
+    --text: #ffffff;
+
+    --text-secondary: #b8aeb7;
+
+    --muted: #766b75;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --radius: 18px;
+
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background: var(--background);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        url("../assets/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter: blur(4px);
+
+    transform: scale(1.05);
+
+}
+
+
+.background-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(255, 79, 163, 0.18),
+            transparent 35%
+        ),
+        rgba(5, 4, 7, 0.82);
+
+}
+
+
+.particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+}
+
+
+.particle {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    opacity: 0.45;
+
+    animation: floatParticle linear infinite;
+
+}
+
+
+@keyframes floatParticle {
+
+    from {
+
+        transform:
+            translateY(110vh)
+            translateX(0);
+
+        opacity: 0;
+
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    85% {
+        opacity: 0.5;
+    }
+
+    to {
+
+        transform:
+            translateY(-10vh)
+            translateX(80px);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: min(
+        680px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+
+    padding: 55px 0 30px;
+
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile {
+
+    text-align: center;
+
+    animation: fadeUp 0.7s ease both;
+
+}
+
+
+.profile-image {
+
+    width: 118px;
+
+    height: 118px;
+
+    margin: 0 auto 18px;
+
+    padding: 4px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #ff9dcc,
+            var(--primary-dark)
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(255, 79, 163, 0.3);
+
+}
+
+
+.profile-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid
+        var(--background);
+
+}
+
+
+.profile-name h1 {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+
+.verified {
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+    margin-left: 4px;
+
+}
+
+
+.username {
+
+    margin-top: 7px;
+
+    color: var(--primary-light);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.description {
+
+    margin-top: 15px;
+
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.socials {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    animation:
+        fadeUp 0.7s 0.1s ease both;
+
+}
+
+
+.social-button {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid var(--border);
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.social-button:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.instagram:hover {
+
+    background: #e1306c;
+
+    box-shadow:
+        0 10px 25px
+        rgba(225, 48, 108, 0.3);
+
+}
+
+
+.tiktok:hover {
+
+    background: #111111;
+
+    box-shadow:
+        0 10px 25px
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    animation:
+        fadeUp 0.7s 0.2s ease both;
+
+}
+
+
+.main-button {
+
+    width: 100%;
+
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    border-radius: var(--radius);
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.035)
+        );
+
+    border: 1px solid var(--border);
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.main-button:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,79,163,0.16),
+            rgba(255,255,255,0.05)
+        );
+
+    border-color:
+        rgba(255,79,163,0.35);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.25);
+
+}
+
+
+.button-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,79,163,0.14);
+
+    color: var(--primary);
+
+    font-size: 19px;
+
+}
+
+
+.main-button span {
+
+    flex: 1;
+
+    text-align: left;
+
+}
+
+
+.main-button > i:last-child {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    transition: 0.25s;
+
+}
+
+
+.main-button:hover > i:last-child {
+
+    color: var(--primary);
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================
+   META DO PC
+========================================= */
+
+.goal-section {
+
+    margin-top: 28px;
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,79,163,0.11),
+            rgba(255,255,255,0.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,79,163,0.22);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,0.2);
+
+    animation:
+        fadeUp 0.7s 0.3s ease both;
+
+}
+
+
+.goal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.goal-header span {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.goal-header h2 {
+
+    margin-top: 5px;
+
+    font-size: 21px;
+
+}
+
+
+.goal-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: var(--primary);
+
+    background:
+        rgba(255,79,163,0.13);
+
+    font-size: 20px;
+
+}
+
+
+.goal-description {
+
+    margin-top: 17px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.goal-values {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    margin-top: 22px;
+
+}
+
+
+.goal-values strong {
+
+    font-size: 25px;
+
+    color: white;
+
+}
+
+
+.goal-values span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.progress-container {
+
+    width: 100%;
+
+    height: 10px;
+
+    margin-top: 13px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+}
+
+
+.progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary-dark),
+            var(--primary),
+            #ff9dcc
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(255,79,163,0.45);
+
+    transition:
+        width 1.3s ease;
+
+}
+
+
+.goal-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 9px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.goal-button {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px 18px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.goal-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,79,163,0.25);
+
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.business {
+
+    margin-top: 28px;
+
+    padding: 23px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid var(--border);
+
+    animation:
+        fadeUp 0.7s 0.4s ease both;
+
+}
+
+
+.business-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: var(--primary);
+
+    background:
+        rgba(255,79,163,0.12);
+
+}
+
+
+.business-content {
+
+    margin-top: 15px;
+
+}
+
+
+.business-content span {
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.business-content h2 {
+
+    margin-top: 5px;
+
+    font-size: 19px;
+
+}
+
+
+.business-content p {
+
+    margin-top: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.business-button {
+
+    margin-top: 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.business-button i {
+
+    color: var(--primary);
+
+    transition: 0.2s;
+
+}
+
+
+.business-button:hover i {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================
+   MODAIS
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* FUNDO DESFOCADO */
+
+.modal-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(5, 3, 7, 0.72);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+}
+
+
+.modal-box {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        520px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 26px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,17,26,0.98),
+            rgba(14,10,15,0.98)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.09);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,0.6);
+
+    transform:
+        translateY(25px)
+        scale(0.97);
+
+    transition: 0.3s ease;
+
+}
+
+
+.modal.active .modal-box {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 16px;
+
+    right: 16px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background:
+        rgba(255,255,255,0.05);
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+
+}
+
+
+.close-modal:hover {
+
+    color: white;
+
+    background:
+        rgba(255,79,163,0.16);
+
+}
+
+
+/* =========================================
+   TÍTULO MODAL
+========================================= */
+
+.modal-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding-right: 40px;
+
+    margin-bottom: 23px;
+
+}
+
+
+.modal-title-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+
+}
+
+
+.discord-icon {
+
+    color: #8ea1ff;
+
+    background:
+        rgba(88,101,242,0.14);
+
+}
+
+
+.pix-icon {
+
+    color: var(--primary);
+
+    background:
+        rgba(255,79,163,0.13);
+
+}
+
+
+.modal-title h2 {
+
+    font-size: 20px;
+
+}
+
+
+.modal-title p {
+
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   SERVIDORES DISCORD
+========================================= */
+
+.discord-server {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px;
+
+    margin-top: 12px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid var(--border);
+
+    transition: 0.25s ease;
+
+}
+
+
+.discord-server:hover {
+
+    background:
+        rgba(255,79,163,0.07);
+
+    border-color:
+        rgba(255,79,163,0.2);
+
+}
+
+
+.discord-server img {
+
+    width: 58px;
+
+    height: 58px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+.server-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.server-info h3 {
+
+    font-size: 14px;
+
+}
+
+
+.server-info p {
+
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+}
+
+
+.server-button {
+
+    flex-shrink: 0;
+
+    padding: 10px 13px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background:
+        var(--primary);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+
+}
+
+
+.server-button:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   LIVE PIX
+========================================= */
+
+.livepix-link-box {
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.livepix-link-box span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.livepix-link-box a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    word-break: break-all;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.livepix-link-box a:hover {
+
+    color: var(--primary-light);
+
+}
+
+
+.livepix-link-box a i {
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   QR CODE
+========================================= */
+
+.qr-section {
+
+    margin-top: 23px;
+
+    text-align: center;
+
+}
+
+
+.qr-section p {
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+}
+
+
+.qr-box {
+
+    width: 220px;
+
+    height: 220px;
+
+    margin: 15px auto;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.3);
+
+}
+
+
+.qr-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.qr-section > span {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    z-index: 2000;
+
+    transform:
+        translate(-50%, 20px);
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    background:
+        #ffffff;
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.toast.active {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px 20px 30px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+footer span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .container {
+
+        width:
+            calc(100% - 24px);
+
+        padding-top: 35px;
+
+    }
+
+
+    .profile-image {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+
+    .profile-name h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .description {
+
+        font-size: 13px;
+
+    }
+
+
+    .goal-section {
+
+        padding: 19px;
+
+    }
+
+
+    .goal-header h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .goal-values strong {
+
+        font-size: 22px;
+
+    }
+
+
+    .modal {
+
+        padding: 12px;
+
+    }
+
+
+    .modal-box {
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .discord-server {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .server-info {
+
+        flex: 1;
+
+    }
+
+
+    .server-button {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .qr-box {
+
+        width: 190px;
+
+        height: 190px;
+
+    }
+
+}/* =========================================
+   DISCORD
+========================================= */
+
+.discord-social:hover {
+
+    background: #5865F2;
+
+    border-color: #5865F2;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(88, 101, 242, 0.35);
+
+}
+
+
+.discord-button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(88, 101, 242, 0.18),
+            rgba(88, 101, 242, 0.07)
+        );
+
+    border-color:
+        rgba(88, 101, 242, 0.45);
+
+    box-shadow:
+        0 12px 30px
+        rgba(88, 101, 242, 0.18);
+
+}
+
+
+.discord-button:hover .button-icon {
+
+    background:
+        rgba(88, 101, 242, 0.22);
+
+    color: #7289DA;
+
+}
+
+
+.discord-button:hover > i:last-child {
+
+    color: #7289DA;
+
+}.made-by {
+display: block;
+margin-top: 18px;
+text-align: center;
+font-size: 11px;
+font-weight: 400;
+letter-spacing: 0.5px;
+color: rgba(255, 255, 255, 0.28);
+}
+
+.made-by strong {
+font-weight: 500;
+color: rgba(255, 255, 255, 0.42);
+}

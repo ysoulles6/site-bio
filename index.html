@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Página oficial"
+    >
+
+    <title>Bio ysoulles</title>
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        href="assets/profile.png"
+    >
+
+    <!-- GOOGLE FONT -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- FUNDO -->
+
+    <div class="background"></div>
+
+    <div class="background-overlay"></div>
+
+    <div class="particles" id="particles"></div>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="container">
+
+
+        <!-- PERFIL -->
+
+        <section class="profile">
+
+            <div class="profile-image">
+
+                <img
+                    src="assets/profile.png"
+                    alt="Foto de perfil"
+                >
+
+            </div>
+
+
+            <div class="profile-name">
+
+                <h1>
+                    Ysoulles
+
+                    <i
+                        class="fa-solid fa-circle-check verified"
+                    ></i>
+
+                </h1>
+
+            </div>
+
+
+            <p class="username">
+                @ysoulles
+            </p>
+
+
+            <p class="description">
+                Criadora de conteúdo 💗
+                <br>
+                Seja bem-vindo ao meu cantinho!
+            </p>
+
+        </section>
+
+
+
+        <!-- REDES SOCIAIS -->
+
+        <section class="socials">
+
+
+            <!-- COMUNIDADE -->
+
+<button
+    class="social-button discord-social"
+    id="socialDiscordButton"
+    aria-label="Discord"
+    type="button"
+>
+    <i class="fa-brands fa-discord"></i>
+</button>
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="https://www.tiktok.com/@ysoulles"
+                target="_blank"
+                class="social-button tiktok"
+                aria-label="TikTok"
+            >
+
+                <i class="fa-brands fa-tiktok"></i>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- LINKS PRINCIPAIS -->
+
+        <section class="links">
+
+
+            <!-- DISCORD -->
+
+            <button
+    class="main-button discord-button"
+    id="discordButton"
+    type="button"
+>
+    <div class="button-icon">
+        <i class="fa-brands fa-discord"></i>
+    </div>
+
+    <span>
+        Servidores do Discord
+    </span>
+
+    <i class="fa-solid fa-arrow-right"></i>
+</button>
+
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="https://www.tiktok.com/@ysoulles"
+                target="_blank"
+                class="main-button"
+            >
+
+                <div class="button-icon">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </div>
+
+                <span>
+                    TikTok
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            <!-- LIVE PIX -->
+
+            <button
+                class="main-button"
+                id="livePixButton"
+            >
+
+                <div class="button-icon">
+
+                    <i class="fa-brands fa-pix"></i>
+
+                </div>
+
+                <span>
+                    Apoie pelo Live Pix
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- META DO PC -->
+
+        <section class="goal-section">
+
+
+            <div class="goal-header">
+
+                <div>
+
+                    <span>
+                        META ESPECIAL
+                    </span>
+
+                    <h2>
+                        🖥️ Novo PC
+                    </h2>
+
+                </div>
+
+
+                <div class="goal-icon">
+
+                    <i class="fa-solid fa-computer"></i>
+
+                </div>
+
+            </div>
+
+
+            <p class="goal-description">
+
+                Ajude a conquistar um PC novo
+                para continuar criando conteúdos
+                incríveis! 💗
+
+            </p>
+
+
+            <!-- VALORES -->
+
+            <div class="goal-values">
+
+                <strong id="currentAmount">
+                    R$ 0,00
+                </strong>
+
+                <span>
+                    de R$ 3.000,00
+                </span>
+
+            </div>
+
+
+            <!-- BARRA -->
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
+                ></div>
+
+            </div>
+
+
+            <!-- RODAPÉ DA META -->
+
+            <div class="goal-footer">
+
+                <span id="progressPercent">
+                    0% da meta alcançada
+                </span>
+
+                <span>
+                    R$ 3.000,00
+                </span>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button
+                class="goal-button"
+                id="goalPixButton"
+            >
+
+                <i class="fa-brands fa-pix"></i>
+
+                Quero ajudar
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- CONTATO -->
+
+        <section class="business">
+
+            <div class="business-icon">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </div>
+
+
+            <div class="business-content">
+
+                <span>
+                    CONTATO
+                </span>
+
+                <h2>
+                    Quer falar comigo?
+                </h2>
+
+                <p>
+                    Para parcerias, trabalhos ou assuntos
+                    profissionais, entre em contato.
+                </p>
+
+            </div>
+
+
+            <a
+                href="mailto:ysoulles6@gmail.com"
+                class="business-button"
+            >
+
+                Entrar em contato
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 • Todos os direitos reservados
+        </p>
+
+        <span class="made-by">Feito por <strong>Marcxz</strong></span>
+
+
+    </footer>
+
+
+
+    <!-- =================================
+         MODAL DISCORD
+    ================================= -->
+
+    <div
+        class="modal"
+        id="discordModal"
+    >
+
+        <div class="modal-background"></div>
+
+
+        <div class="modal-box discord-modal">
+
+
+            <button
+                class="close-modal"
+                id="closeDiscordModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-title">
+
+                <div class="modal-title-icon discord-icon">
+
+                    <i class="fa-brands fa-discord"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Servidores Discord
+                    </h2>
+
+                    <p>
+                        Escolha um servidor para entrar 💗
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVIDOR 1 -->
+
+            <div class="discord-server">
+
+                <img
+                    src="assets/discord1.png"
+                    alt="Servidor Discord 1"
+                >
+
+                <div class="server-info">
+
+                    <h3>
+                        Servidor Colombia
+                    </h3>
+
+                    <p>
+                        Pule Contra!
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://discord.gg/eGr6MTeVg"
+                    target="_blank"
+                    class="server-button"
+                >
+
+                    Entrar
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SERVIDOR 2 -->
+
+            <div class="discord-server">
+
+                <img
+                    src="assets/discord2.png"
+                    alt="Servidor Discord 2"
+                >
+
+                <div class="server-info">
+
+                    <h3>
+                        Acesso FF 2022
+                    </h3>
+
+                    <p>
+                        Grátis!
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://discord.gg/NEnTe4ZX7Q"
+                    target="_blank"
+                    class="server-button"
+                >
+
+                    Entrar
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         MODAL LIVE PIX
+    ================================= -->
+
+    <div
+        class="modal"
+        id="livePixModal"
+    >
+
+        <div class="modal-background"></div>
+
+
+        <div class="modal-box livepix-modal">
+
+
+            <button
+                class="close-modal"
+                id="closeLivePixModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-title">
+
+                <div class="modal-title-icon pix-icon">
+
+                    <i class="fa-brands fa-pix"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Live Pix
+                    </h2>
+
+                    <p>
+                        Quer apoiar meu trabalho? 💗
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LINK LIVE PIX -->
+
+            <div class="livepix-link-box">
+
+                <span>
+                    LINK DO LIVE PIX
+                </span>
+
+                <a
+                    href="https://livepix.gg/jhullyz"
+                    target="_blank"
+                >
+
+                    https://livepix.gg/jhullyz
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- QR CODE -->
+
+            <div class="qr-section">
+
+                <p>
+                    Ou escaneie o QR Code
+                </p>
+
+                <div class="qr-box">
+
+                    <img
+                        src="assets/qr.png"
+                        alt="QR Code Live Pix"
+                    >
+
+                </div>
+
+                <span>
+                    Aponte a câmera do celular
+                    para o QR Code.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        Copiado!
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
