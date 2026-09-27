@@ -1,90 +1,4 @@
 /* =========================================
-   META DO PC
-========================================= */
-
-const metaTotal = 3000;
-
-
-/*
-    ALTERE SOMENTE ESTE VALOR.
-
-    Exemplos:
-
-    0
-    100
-    250
-    500
-    1000
-    1500
-*/
-
-const valorArrecadado = 0;
-
-
-
-/* ELEMENTOS */
-
-const currentAmount =
-    document.getElementById("currentAmount");
-
-const progressBar =
-    document.getElementById("progressBar");
-
-const progressPercent =
-    document.getElementById("progressPercent");
-
-
-
-/* CALCULAR PORCENTAGEM */
-
-const porcentagem =
-    Math.min(
-        (valorArrecadado / metaTotal) * 100,
-        100
-    );
-
-
-
-/* FORMATAR VALOR */
-
-const valorFormatado =
-    valorArrecadado.toLocaleString(
-        "pt-BR",
-        {
-            style: "currency",
-            currency: "BRL"
-        }
-    );
-
-
-
-/* MOSTRAR VALOR */
-
-currentAmount.textContent =
-    valorFormatado;
-
-
-
-/* ANIMAR BARRA */
-
-setTimeout(() => {
-
-    progressBar.style.width =
-        porcentagem + "%";
-
-}, 300);
-
-
-
-/* PORCENTAGEM */
-
-progressPercent.textContent =
-    porcentagem.toFixed(0) +
-    "% da meta alcançada";
-
-
-
-/* =========================================
    MODAL DISCORD
 ========================================= */
 
@@ -181,9 +95,6 @@ if (discordModal) {
 const livePixButton =
     document.getElementById("livePixButton");
 
-const goalPixButton =
-    document.getElementById("goalPixButton");
-
 const livePixModal =
     document.getElementById("livePixModal");
 
@@ -207,15 +118,6 @@ function abrirLivePix() {
 /* BOTÃO LIVE PIX */
 
 livePixButton.addEventListener(
-    "click",
-    abrirLivePix
-);
-
-
-
-/* BOTÃO QUERO AJUDAR */
-
-goalPixButton.addEventListener(
     "click",
     abrirLivePix
 );
